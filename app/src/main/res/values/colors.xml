@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="dark_red">#9B1313</color>
+    <color name="darkViolet">#2A1B56</color>
+    <color name="colorOnBackground">#757575</color>
+    <color name="colorSelectedTab">#2A1B56</color>
+    <color name="colorTabIndicator">#F7D54E</color>
+    <color name="colorTabIndicator2">#C66F00</color>
+    <color name="scoreHeaderRowColor">#87B8E9</color>
+    <color name="photoBackground">#706969</color>
+    <color name="darkLightTint">#000000</color>
+    <color name="darkLightFill">#FFFFFF</color>
+    <color name="roundInfoTextColor">#976C0B</color>
+    <color name="finishedStatusColor">#0C7567</color>
+
+</resources>

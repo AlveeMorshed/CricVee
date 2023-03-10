@@ -1,0 +1,59 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="text_to_text_margin">8dp</dimen>
+    <dimen name="team_img_width">45dp</dimen>
+    <dimen name="team_img_height">45dp</dimen>
+    <dimen name="team_imgCard_big_width">65dp</dimen>
+    <dimen name="team_imgCard_big_height">65dp</dimen>
+
+    <dimen name="player_img_width">55dp</dimen>
+    <dimen name="player_img_height">55dp</dimen>
+    <dimen name="lineup_text_size">11.5sp</dimen>
+    <dimen name="score_summary_text_size">13.75sp</dimen>
+
+    <dimen name="bottNavElevation">10dp</dimen>
+    <dimen name="bottNavIconSize">27dp</dimen>
+    <dimen name="bottNavMargin">7dp</dimen>
+    <dimen name="bottNavWidth">53dp</dimen>
+    <dimen name="search_marginTop">30dp</dimen>
+    <dimen name="playerName_text_size">16.5sp</dimen>
+    <dimen name="tabLayoutMargin">35sp</dimen>
+    <dimen name="tab_text_size">15sp</dimen>
+    <dimen name="teamHeaderTextSize">12sp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="options_margin">5dp</dimen>
+    <dimen name="innings_padding">3.5dp</dimen>
+    <dimen name="rankMargin">1dp</dimen>
+    <dimen name="columnMargin">70dp</dimen>
+    <dimen name="horizontal_double">32dp</dimen>
+    <dimen name="homeScreen_title_size">15sp</dimen>
+    <dimen name="invisible_runs_size">40sp</dimen>
+    <dimen name="invisible_fours_size">46sp</dimen>
+    <dimen name="invisible_sixes_size">43sp</dimen>
+    <dimen name="minimum_dp">0.0000001dp</dimen>
+    <dimen name="team_header">125dp</dimen>
+    <dimen name="scorecardTeamNameSize">16.75sp</dimen>
+    <dimen name="cardCornerRadius">14dp</dimen>
+    <dimen name="cardCornerSmallRadius">7dp</dimen>
+    <dimen name="teamImgHeaderWidth">48dp</dimen>
+    <dimen name="vs_text_size">18.75sp</dimen>
+    <dimen name="playerInfoMargin">27sp</dimen>
+    <dimen name="flag_small_size">20sp</dimen>
+    <dimen name="playerProfile_txtV_height">30dp</dimen>
+    <dimen name="playerProfileName_txtSize">20sp</dimen>
+    <dimen name="playerDetails_coverPhotoHeight">145sp</dimen>
+    <dimen name="playerProfileImageSize">135dp</dimen>
+    <dimen name="profilePictureMarginTop">100dp</dimen>
+    <dimen name="profilePictureMarginStart">20dp</dimen>
+    <dimen name="profilePictureStrokeWidth">3sp</dimen>
+    <dimen name="profilePicturePadding">2dp</dimen>
+    <dimen name="bigMargin">64dp</dimen>
+    <dimen name="matchInfoRowWidth">90dp</dimen>
+    <dimen name="scoreTopMargin">65sp</dimen>
+    <dimen name="matchNotePadding">4dp</dimen>
+    <dimen name="scoreSummaryWidth">83dp</dimen>
+    <dimen name="columnTextSize">18sp</dimen>
+    <dimen name="textSizeSp">16sp</dimen>
+</resources>

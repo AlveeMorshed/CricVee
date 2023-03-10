@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.moinul.cricvee.ui.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/playersFragment"
+        android:name="com.moinul.cricvee.ui.PlayersFragment"
+        android:label="Players"
+        tools:layout="@layout/fragment_players" />
+    <fragment
+        android:id="@+id/statisticsFragment"
+        android:name="com.moinul.cricvee.ui.StatisticsFragment"
+        android:label="Statistics"
+        tools:layout="@layout/fragment_statistics_list" />
+    <fragment
+        android:id="@+id/ICCTeamRankingsFragment"
+        android:name="com.moinul.cricvee.ui.ICCTeamRankingsFragment"
+        android:label="Men's Team Rankings" />
+    <fragment
+        android:id="@+id/matchDetailsFragment"
+        android:name="com.moinul.cricvee.ui.MatchDetailsFragment"
+        android:label="Match Details" >
+        <argument
+            android:name="fixtureId"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/battingScoreboardFragment"
+        android:name="com.moinul.cricvee.ui.BattingScoreboardFragment"
+        android:label="BattingScoreboardFragment" />
+    <fragment
+        android:id="@+id/playerCareerFragment"
+        android:name="com.moinul.cricvee.ui.PlayerCareerFragment"
+        android:label="Player Career Details"
+        tools:layout="@layout/fragment_player_career" >
+        <argument
+            android:name="playerName"
+            app:argType="string"
+            android:defaultValue='""' />
+        <argument
+            android:name="flagImagePath"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="playerImagePath"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="playerCountryName"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="playerID"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/ICCWomenTeamRankingsFragment"
+        android:name="com.moinul.cricvee.ui.ICCWomenTeamRankingsFragment"
+        android:label="Women's Team Rankings" />
+    <fragment
+        android:id="@+id/fixtureListFragment"
+        android:name="com.moinul.cricvee.ui.FixtureListFragment"
+        android:label="All Fixtures" />
+    <fragment
+        android:id="@+id/stageListFragment"
+        android:name="com.moinul.cricvee.ui.StageListFragment"
+        android:label="Stages" >
+        <argument
+            android:name="leagueId"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="seasonId"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="leagueImagePath"
+            app:argType="string"
+            android:defaultValue='""' />
+        <argument
+            android:name="leagueName"
+            app:argType="string"
+            android:defaultValue='""' />
+    </fragment>
+    <fragment
+        android:id="@+id/tournamentFixtureFragment"
+        android:name="com.moinul.cricvee.ui.TournamentFixtureFragment"
+        android:label="Tournament Fixture" >
+        <argument
+            android:name="stageId"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="leagueId"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="seasonId"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="leagueImagePath"
+            app:argType="string"
+            android:defaultValue='""' />
+        <argument
+            android:name="leagueName"
+            app:argType="string"
+            android:defaultValue='""' />
+    </fragment>
+</navigation>

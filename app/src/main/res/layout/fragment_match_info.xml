@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.MatchInfoFragment">
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="gone" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/info_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/match_facts"
+            android:textStyle="bold"
+            android:textSize="@dimen/playerProfileName_txtSize"
+            android:paddingStart="@dimen/text_to_text_margin"
+            android:background="@color/scoreHeaderRowColor" />
+
+        <LinearLayout
+            android:id="@+id/table_rows"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/info_title"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/matchRound_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/matchRound"
+                    android:layout_width="@dimen/matchInfoRowWidth"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:textSize="@dimen/activity_horizontal_margin"
+                    android:text="@string/match"
+                    android:paddingStart="@dimen/text_to_text_margin"
+                    android:layout_gravity="center" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/matchRoundValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    tools:text="@string/string_final"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/activity_horizontal_margin" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/matchRound_footer"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profilePicturePadding"
+                android:background="@color/scoreHeaderRowColor" />
+
+            <LinearLayout
+                android:id="@+id/stage_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/stage"
+                    android:layout_width="@dimen/matchInfoRowWidth"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:textSize="@dimen/activity_horizontal_margin"
+                    android:text="@string/series"
+                    android:layout_gravity="center"
+                    android:paddingStart="@dimen/text_to_text_margin" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/stageValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:layout_gravity="center"
+                    tools:text="@string/string_final"
+                    android:textSize="@dimen/activity_horizontal_margin" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/stage_footer"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profilePicturePadding"
+                android:background="@color/scoreHeaderRowColor" />
+
+            <LinearLayout
+                android:id="@+id/time_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/time"
+                    android:layout_width="@dimen/matchInfoRowWidth"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:textSize="@dimen/activity_horizontal_margin"
+                    android:text="@string/time"
+                    android:layout_gravity="center"
+                    android:paddingStart="@dimen/text_to_text_margin" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/timeValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:layout_gravity="center"
+                    tools:text="@string/string_final"
+                    android:textSize="@dimen/activity_horizontal_margin" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/timeFooter"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profilePicturePadding"
+                android:background="@color/scoreHeaderRowColor" />
+
+            <LinearLayout
+                android:id="@+id/venue_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/venue"
+                    android:layout_width="@dimen/matchInfoRowWidth"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/activity_horizontal_margin"
+                    android:text="@string/venue"
+                    android:paddingStart="@dimen/text_to_text_margin" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/venueValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.75"
+                    tools:text="@string/string_final"
+                    android:textSize="@dimen/activity_horizontal_margin" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/venueFooter"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profilePicturePadding"
+                android:background="@color/scoreHeaderRowColor" />
+
+            <LinearLayout
+                android:id="@+id/tossWon_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tossWon"
+                    android:layout_width="@dimen/matchInfoRowWidth"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.25"
+                    android:textSize="@dimen/activity_horizontal_margin"
+                    android:text="@string/toss"
+                    android:paddingStart="@dimen/text_to_text_margin" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tossWonValue"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    tools:text="@string/string_final"
+                    android:textSize="@dimen/activity_horizontal_margin" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/tossWonFooter"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profilePicturePadding"
+                android:background="@color/scoreHeaderRowColor" />
+
+            <LinearLayout
+                android:id="@+id/manOfTheMatch_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/manOfTheMatch"
+                    android:layout_width="@dimen/matchInfoRowWidth"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:textSize="@dimen/activity_horizontal_margin"
+                    android:text="@string/man_of_the_match"
+                    android:paddingStart="@dimen/text_to_text_margin"
+                    android:layout_gravity="center" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/manOfTheMatchValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:layout_gravity="center"
+                    android:text="@string/yet_to_decide"
+                    android:textSize="@dimen/activity_horizontal_margin" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/manOfTheMatchFooter"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profilePicturePadding"
+                android:background="@color/scoreHeaderRowColor" />
+
+            <LinearLayout
+                android:id="@+id/firstUmpire_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/firstUmpire"
+                    android:layout_width="@dimen/matchInfoRowWidth"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.25"
+                    android:textSize="@dimen/activity_horizontal_margin"
+                    android:text="@string/_1st_umpire"
+                    android:paddingStart="@dimen/text_to_text_margin" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/firstUmpireValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.75"
+                    android:text="@string/unavailable"
+                    android:textSize="@dimen/activity_horizontal_margin" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/firstUmpireFooter"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profilePicturePadding"
+                android:background="@color/scoreHeaderRowColor" />
+
+            <LinearLayout
+                android:id="@+id/secondUmpire_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/secondUmpire"
+                    android:layout_width="@dimen/matchInfoRowWidth"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.25"
+                    android:textSize="@dimen/activity_horizontal_margin"
+                    android:text="@string/_2nd_umpire"
+                    android:paddingStart="@dimen/text_to_text_margin" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/secondUmpireValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.75"
+                    android:text="@string/unavailable"
+                    android:textSize="@dimen/activity_horizontal_margin" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/secondUmpireFooter"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profilePicturePadding"
+                android:background="@color/scoreHeaderRowColor" />
+
+            <LinearLayout
+                android:id="@+id/tvUmpire_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvUmpire"
+                    android:layout_width="@dimen/matchInfoRowWidth"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.25"
+                    android:textSize="@dimen/activity_horizontal_margin"
+                    android:text="@string/tv_3rd_umpire"
+                    android:paddingStart="@dimen/text_to_text_margin" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvUmpireValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.75"
+                    android:text="@string/unavailable"
+                    android:textSize="@dimen/activity_horizontal_margin" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/tvUmpireFooter"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profilePicturePadding"
+                android:background="@color/scoreHeaderRowColor" />
+
+            <LinearLayout
+                android:id="@+id/referee_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/referee"
+                    android:layout_width="@dimen/matchInfoRowWidth"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.25"
+                    android:textSize="@dimen/activity_horizontal_margin"
+                    android:text="@string/referee"
+                    android:paddingStart="@dimen/text_to_text_margin" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/refereeValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.75"
+                    android:text="@string/unavailable"
+                    android:textSize="@dimen/activity_horizontal_margin" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/refereeFooter"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profilePicturePadding"
+                android:background="@color/scoreHeaderRowColor" />
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

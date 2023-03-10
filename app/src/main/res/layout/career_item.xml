@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/rankMargin"
+    android:elevation="@dimen/options_margin">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/player_column"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/text_to_text_margin"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/balls_column"
+            android:layout_width="@dimen/invisible_runs_size"
+            android:layout_height="wrap_content"
+
+            android:layout_marginRight="16dp"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/player_column"
+            app:layout_constraintEnd_toStartOf="@id/fours_column"
+            app:layout_constraintTop_toTopOf="@id/player_column" />
+
+        <TextView
+            android:id="@+id/fours_column"
+            android:layout_width="@dimen/invisible_fours_size"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:textAlignment="center"
+            android:textSize="18sp"
+
+            app:layout_constraintBottom_toBottomOf="@id/player_column"
+            app:layout_constraintEnd_toStartOf="@id/sixes_column"
+            app:layout_constraintTop_toTopOf="@id/player_column" />
+
+        <TextView
+            android:id="@+id/sixes_column"
+            android:layout_width="@dimen/invisible_sixes_size"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/bigMargin"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/player_column"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/player_column" />
+
+
+        <!-- Sample scorecard row1 -->
+        <TextView
+            android:id="@+id/career_parameter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/options_margin"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@id/balls_column"
+            app:layout_constraintStart_toStartOf="@id/player_column"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/test_career_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/balls_column"
+            app:layout_constraintStart_toStartOf="@id/balls_column"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/odi_career_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@id/fours_column"
+            app:layout_constraintEnd_toEndOf="@id/fours_column"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/t20i_career_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@id/sixes_column"
+            app:layout_constraintEnd_toEndOf="@id/sixes_column"
+            android:textSize="16sp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

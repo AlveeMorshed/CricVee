@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.MatchDetailsFragment">
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="gone" />
+
+        <!-- Header section -->
+        <LinearLayout
+            android:id="@+id/match_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            >
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/visitor_team_img"
+                android:layout_width="@dimen/teamImgHeaderWidth"
+                android:layout_height="@dimen/teamImgHeaderWidth"
+                tools:src="@drawable/ic_dashboard_black_24dp" />
+
+            <TextView
+                android:layout_width="@dimen/team_header"
+                android:layout_height="45dp"
+                android:id="@+id/visitor_team_name"
+                android:textSize="@dimen/scorecardTeamNameSize"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:singleLine="false"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textColor="@color/darkLightTint"
+                android:gravity="center"
+                tools:text="@string/dummyName" />
+
+
+            <TextView
+                android:id="@+id/vs_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/vs"
+                android:textColor="@color/darkLightTint"
+                android:textStyle="bold|italic"
+                android:textSize="@dimen/vs_text_size" />
+
+            <TextView
+                android:layout_width="@dimen/team_header"
+                android:layout_height="45dp"
+                android:id="@+id/local_team_name"
+                android:textSize="@dimen/scorecardTeamNameSize"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textColor="@color/darkLightTint"
+                android:singleLine="false"
+                tools:text="@string/dummyName" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/local_team_img"
+                android:layout_width="@dimen/teamImgHeaderWidth"
+                android:layout_height="@dimen/teamImgHeaderWidth"
+                tools:src="@drawable/ic_dashboard_black_24dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/visitorTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/tab_text_size"
+            app:layout_constraintBottom_toTopOf="@id/tab_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/match_title"
+            android:textStyle="bold"
+            android:textColor="@color/darkLightTint"
+            android:layout_margin="@dimen/bottNavElevation"
+            tools:text="@string/dummyScore" />
+
+        <TextView
+            android:id="@+id/localTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/bottNavElevation"
+            android:textSize="@dimen/tab_text_size"
+            app:layout_constraintBottom_toTopOf="@id/tab_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.85"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/match_title"
+            android:textColor="@color/darkLightTint"
+            android:textStyle="bold"
+            tools:text="@string/dummyScore" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="36sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/tabLayoutMargin"
+            app:layout_constraintTop_toBottomOf="@id/match_title"
+            app:tabIndicatorColor="@color/colorTabIndicator"
+            app:tabIndicatorHeight="3.5dp"
+            app:tabMode="fixed"
+            app:tabBackground="@color/darkViolet"
+            app:tabSelectedTextColor="@color/colorTabIndicator"
+            app:tabTextColor="@color/colorOnBackground" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/text_to_text_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tab_layout"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
